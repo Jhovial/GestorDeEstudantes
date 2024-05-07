@@ -115,6 +115,7 @@
             this.buttonEnviar.TabIndex = 6;
             this.buttonEnviar.Text = "Enviar";
             this.buttonEnviar.UseVisualStyleBackColor = false;
+            this.buttonEnviar.Click += new System.EventHandler(this.buttonEnviar_Click);
             // 
             // buttonCancelar
             // 
