@@ -16,7 +16,19 @@ namespace GestorDeEstudantes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            //Application.Run(new Login_Form());
+
+            FormLogin formLogin = new FormLogin();
+
+            if(formLogin.ShowDialog() == DialogResult.OK )
+            {
+                Application.Run(new FormLogin());
+
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
