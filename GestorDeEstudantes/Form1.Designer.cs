@@ -80,6 +80,7 @@
             this.textBoxSenha.Location = new System.Drawing.Point(73, 222);
             this.textBoxSenha.Multiline = true;
             this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.PasswordChar = '0';
             this.textBoxSenha.Size = new System.Drawing.Size(237, 30);
             this.textBoxSenha.TabIndex = 3;
             // 
@@ -92,6 +93,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(237, 30);
             this.textBoxName.TabIndex = 4;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // pictureBox1
             // 
