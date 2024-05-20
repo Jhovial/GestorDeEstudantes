@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\Downloads\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -55,6 +55,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estudante.cs" />
     <Compile Include="FormInserirAluno.cs">
       <SubType>Form</SubType>
     </Compile>

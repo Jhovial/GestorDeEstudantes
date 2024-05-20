@@ -22,7 +22,7 @@ namespace GestorDeEstudantes
 
             if(formLogin.ShowDialog() == DialogResult.OK )
             {
-                Application.Run(new FormLogin());
+                Application.Run(new formPrincpal());
 
             }
             else
