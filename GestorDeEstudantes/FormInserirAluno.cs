@@ -59,7 +59,7 @@ namespace GestorDeEstudantes
 
             procurarFoto.Filter = "Selecione a foto(*.jpg; *.png; *.jpeg;*.gif)|*.jpg; *.png; *.jpeg;*.gif";
 
-            if(procurarFoto.ShowDialog() == DialogResult.OK)
+            if (procurarFoto.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxFoto.Image = Image.FromFile(procurarFoto.FileName);
             }
@@ -67,10 +67,10 @@ namespace GestorDeEstudantes
 
         bool Verificar()
         {
-            if((textBoxName.Text.Trim() == "") ||
+            if ((textBoxName.Text.Trim() == "") ||
                (textBoxSobrenome.Text.Trim() == "") ||
                (textBoxTelefone.Text.Trim() == "") ||
-               (textBoxEndereco.Text.Trim() == "")||
+               (textBoxEndereco.Text.Trim() == "") ||
                (pictureBoxFoto.Image == null))
             {
                 return false;
@@ -102,19 +102,38 @@ namespace GestorDeEstudantes
             }
 
             MemoryStream foto = new MemoryStream();
-            
+
             // Verificar se o aluno tem entre 10 e 100 anos.
             int anoDeNascimento = DataNascimento.Value.Year;
             int anoAtual = DateTime.Now.Year;
 
-            if((anoAtual - anoDeNascimento) < 10 || (anoAtual - anoDeNascimento) > 100) 
+            if ((anoAtual - anoDeNascimento) < 10 || (anoAtual - anoDeNascimento) > 100)
             {
-                MessageBox.Show("O aluno precisa ter entre 10 e 100 anos.", 
+                MessageBox.Show("O aluno precisa ter entre 10 e 100 anos.",
                     "Ano de Nascimento inválido",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-            }
 
+            }
+            if ((anoAtual - anoDeNascimento) < 10 || (anoAtual - anoDeNascimento) > 100)
+            {
+                MessageBox.Show("O aluno precisa ter entre 10 e 100 anos.",
+                    "Ano de nascimento Inválido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else if (Verificar())
+            {
+                pictureBoxFoto.Image.Save(foto, pictureBoxFoto.Image.RawFormat);
+                if (estudante.inserirEstudante(Nome, Sobrenome, Nascimento, Telefone, Genero, Endereco, foto))
+                {
+                    MessageBox.Show("Novo aluno cadastrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Novo não cadastrado!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }
