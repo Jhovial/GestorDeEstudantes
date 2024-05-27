@@ -20,11 +20,13 @@ namespace GestorDeEstudantes
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormInserirAluno formInserirAluno = new FormInserirAluno();
+            formInserirAluno.Show(this);
         }
 
         private void listarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormListarEstudantes formListarEstudantes = new FormListarEstudantes();
+            formListarEstudantes.Show(this);
         }
 
         private void estatísticasToolStripMenuItem_Click(object sender, EventArgs e)

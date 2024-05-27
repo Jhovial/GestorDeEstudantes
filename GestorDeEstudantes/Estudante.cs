@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace GestorDeEstudantes
             comando.Parameters.Add("@Genero", MySqlDbType.VarChar).Value = Genero;
             comando.Parameters.Add("@Telefone", MySqlDbType.VarChar).Value = Telefone;
             comando.Parameters.Add("@Endereco", MySqlDbType.Text).Value = Endereco;
-            comando.Parameters.Add("@Foto", MySqlDbType.LongBlob).Value = Foto;
+            comando.Parameters.Add("@Foto", MySqlDbType.LongBlob).Value = Foto.ToArray();
 
             meuBancoDeDados.abrirConexao();
 
@@ -36,7 +37,20 @@ namespace GestorDeEstudantes
                 meuBancoDeDados.fecharConexao();
                 return false;
             }
-        }   
+        } 
+        
+        //RETORNA a tabela dos estudantes que estão no banco de dados
 
+        public DataTable getEstudantes(MySqlCommand comando)
+        {
+            comando.Connection = meuBancoDeDados.getConexao;
+
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabelaDeDados = new DataTable();
+            adaptador.Fill(tabelaDeDados);
+
+            return tabelaDeDados;
+        } 
+        
     }
 }
