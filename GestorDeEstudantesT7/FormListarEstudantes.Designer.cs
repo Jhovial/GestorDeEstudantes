@@ -35,6 +35,7 @@
             // 
             // dataGridViewListaDeAlunos
             // 
+            this.dataGridViewListaDeAlunos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListaDeAlunos.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewListaDeAlunos.Name = "dataGridViewListaDeAlunos";
