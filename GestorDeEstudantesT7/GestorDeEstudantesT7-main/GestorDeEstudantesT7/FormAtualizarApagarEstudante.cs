@@ -17,6 +17,8 @@ namespace GestorDeEstudantesT7
             InitializeComponent();
         }
 
+        Estudante estudante = new Estudante();
+
         private void buttonEnviarFoto_Click(object sender, EventArgs e)
         {
             // Abre janela para pesquisar a imagem no computador.
@@ -28,6 +30,43 @@ namespace GestorDeEstudantesT7
             {
                 pictureBoxFoto.Image = Image.FromFile(procurarFoto.FileName);
             }
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            int idAluno = Convert.ToInt32(textBoxID.Text);
+       
+            if(MessageBox.Show("Tem certeza que deseja apagar o aluno?", 
+            "Apagar Estudante", MessageBoxButtons.YesNo, 
+            MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (estudante.apagarEstudante(idAluno))
+                {
+                    MessageBox.Show("Aluno apagado!", "Apagar Estudante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Limpa as coisas de texto.
+                    textBoxID.Text = "";
+                    textBoxNome.Text = "";
+                    textBoxSobrenome.Text = "";
+                    dateTimePickerNascimento.Text = "";
+                    textBoxTelefone.Text = "";
+                    textBoxEndereco.Text = "";
+                    pictureBoxFoto.Text = "";
+
+                }
+            }
+        
+        
+        }
+
+        private void pictureBoxFoto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
