@@ -59,7 +59,7 @@
             // 
             this.dateTimePickerNascimento.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNascimento.Location = new System.Drawing.Point(135, 88);
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(133, 132);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
             this.dateTimePickerNascimento.Size = new System.Drawing.Size(87, 20);
             this.dateTimePickerNascimento.TabIndex = 13;
@@ -68,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 92);
+            this.label3.Location = new System.Drawing.Point(25, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 12;
@@ -78,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 65);
+            this.label1.Location = new System.Drawing.Point(25, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 11;
@@ -86,7 +86,7 @@
             // 
             // textBoxSobrenome
             // 
-            this.textBoxSobrenome.Location = new System.Drawing.Point(135, 62);
+            this.textBoxSobrenome.Location = new System.Drawing.Point(133, 106);
             this.textBoxSobrenome.Name = "textBoxSobrenome";
             this.textBoxSobrenome.Size = new System.Drawing.Size(182, 20);
             this.textBoxSobrenome.TabIndex = 10;
@@ -95,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 39);
+            this.label2.Location = new System.Drawing.Point(25, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 9;
@@ -103,7 +103,7 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(135, 36);
+            this.textBoxNome.Location = new System.Drawing.Point(133, 80);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(182, 20);
             this.textBoxNome.TabIndex = 8;
@@ -112,7 +112,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButtonFeminino);
             this.groupBox1.Controls.Add(this.radioButtonMasculino);
-            this.groupBox1.Location = new System.Drawing.Point(117, 114);
+            this.groupBox1.Location = new System.Drawing.Point(115, 158);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 49);
             this.groupBox1.TabIndex = 17;
@@ -144,7 +144,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 131);
+            this.label4.Location = new System.Drawing.Point(26, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 16;
@@ -154,7 +154,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 271);
+            this.label7.Location = new System.Drawing.Point(25, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 23;
@@ -163,19 +163,18 @@
             // pictureBoxFoto
             // 
             this.pictureBoxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFoto.Image")));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(150, 271);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(148, 315);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(158, 158);
             this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFoto.TabIndex = 22;
             this.pictureBoxFoto.TabStop = false;
-            this.pictureBoxFoto.Click += new System.EventHandler(this.pictureBoxFoto_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 208);
+            this.label6.Location = new System.Drawing.Point(25, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 17);
             this.label6.TabIndex = 21;
@@ -183,7 +182,7 @@
             // 
             // textBoxEndereco
             // 
-            this.textBoxEndereco.Location = new System.Drawing.Point(135, 205);
+            this.textBoxEndereco.Location = new System.Drawing.Point(133, 249);
             this.textBoxEndereco.Multiline = true;
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(182, 48);
@@ -193,7 +192,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 182);
+            this.label5.Location = new System.Drawing.Point(25, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 19;
@@ -201,7 +200,7 @@
             // 
             // textBoxTelefone
             // 
-            this.textBoxTelefone.Location = new System.Drawing.Point(135, 179);
+            this.textBoxTelefone.Location = new System.Drawing.Point(133, 223);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(182, 20);
             this.textBoxTelefone.TabIndex = 18;
@@ -209,18 +208,19 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Location = new System.Drawing.Point(230, 9);
+            this.buttonBuscar.Location = new System.Drawing.Point(228, 39);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(90, 21);
+            this.buttonBuscar.Size = new System.Drawing.Size(90, 35);
             this.buttonBuscar.TabIndex = 24;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 12);
+            this.label8.Location = new System.Drawing.Point(26, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 17);
             this.label8.TabIndex = 26;
@@ -228,7 +228,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(135, 9);
+            this.textBoxID.Location = new System.Drawing.Point(133, 48);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(87, 20);
             this.textBoxID.TabIndex = 25;
@@ -236,7 +236,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(41, 491);
+            this.buttonSalvar.Location = new System.Drawing.Point(39, 535);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(118, 40);
             this.buttonSalvar.TabIndex = 27;
@@ -247,7 +247,7 @@
             // buttonApagar
             // 
             this.buttonApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonApagar.Location = new System.Drawing.Point(193, 491);
+            this.buttonApagar.Location = new System.Drawing.Point(191, 535);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(124, 40);
             this.buttonApagar.TabIndex = 28;
@@ -258,7 +258,7 @@
             // buttonEnviarFoto
             // 
             this.buttonEnviarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEnviarFoto.Location = new System.Drawing.Point(170, 435);
+            this.buttonEnviarFoto.Location = new System.Drawing.Point(168, 479);
             this.buttonEnviarFoto.Name = "buttonEnviarFoto";
             this.buttonEnviarFoto.Size = new System.Drawing.Size(118, 40);
             this.buttonEnviarFoto.TabIndex = 29;
@@ -270,7 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 547);
+            this.ClientSize = new System.Drawing.Size(357, 587);
             this.Controls.Add(this.buttonEnviarFoto);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonSalvar);
@@ -292,7 +292,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNome);
             this.Name = "FormAtualizarApagarEstudante";
-            this.Text = "FormAtualizarApagarEstudante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Atualizar e Deletar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
