@@ -91,13 +91,10 @@ namespace GestorDeEstudantesT7
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Ocorreu um erro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            
-           
         }
 
         bool Verificar()
@@ -151,14 +148,10 @@ namespace GestorDeEstudantesT7
                     }
                 }
             }
-            catch 
+            catch
             {
-                MessageBox.Show("Ocorreu um erro.","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            
-            
-            
         }
 
         // Variável global do tipo MeuBancoDeDados...
@@ -196,8 +189,7 @@ namespace GestorDeEstudantesT7
                         radioButtonMasculino.Checked = true;
                     }
 
-                    byte[] foto = (byte[])tabela.Rows[0]["foto"]; 
-
+                    byte[] foto = (byte[])tabela.Rows[0]["foto"];
                     MemoryStream fotoStream = new MemoryStream(foto);
                     pictureBoxFoto.Image = Image.FromStream(fotoStream);
                 }
