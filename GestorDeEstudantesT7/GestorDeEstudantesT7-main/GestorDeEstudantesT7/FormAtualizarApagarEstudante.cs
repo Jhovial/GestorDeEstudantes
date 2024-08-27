@@ -78,7 +78,6 @@ namespace GestorDeEstudantesT7
                         MessageBox.Show("Dados salvos!", "Sucesso!",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // Preenche a tabela com os alunos do banco de dados.
-                        preencheTabela(new MySqlCommand("SELECT * FROM `estudantes`"));
                     }
                     else
                     {

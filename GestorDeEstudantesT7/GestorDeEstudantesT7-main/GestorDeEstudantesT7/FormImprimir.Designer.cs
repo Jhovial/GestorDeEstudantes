@@ -30,19 +30,19 @@
         {
             this.dataGridViewListaDeAlunos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.buttonFiltrar = new System.Windows.Forms.Button();
+            this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonAtualizar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaDeAlunos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -59,8 +59,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.buttonFiltrar);
+            this.groupBox1.Controls.Add(this.radioButtonTodos);
             this.groupBox1.Controls.Add(this.radioButtonFeminino);
             this.groupBox1.Controls.Add(this.radioButtonMasculino);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -70,16 +70,29 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton1
+            // buttonFiltrar
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(158, 48);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.Text = "Todos";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.buttonFiltrar.BackColor = System.Drawing.Color.Orange;
+            this.buttonFiltrar.FlatAppearance.BorderSize = 0;
+            this.buttonFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFiltrar.Location = new System.Drawing.Point(542, 29);
+            this.buttonFiltrar.Name = "buttonFiltrar";
+            this.buttonFiltrar.Size = new System.Drawing.Size(164, 59);
+            this.buttonFiltrar.TabIndex = 21;
+            this.buttonFiltrar.Text = "Filtrar";
+            this.buttonFiltrar.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonTodos
+            // 
+            this.radioButtonTodos.AutoSize = true;
+            this.radioButtonTodos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonTodos.Location = new System.Drawing.Point(158, 48);
+            this.radioButtonTodos.Name = "radioButtonTodos";
+            this.radioButtonTodos.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonTodos.TabIndex = 2;
+            this.radioButtonTodos.Text = "Todos";
+            this.radioButtonTodos.UseVisualStyleBackColor = true;
             // 
             // radioButtonFeminino
             // 
@@ -108,8 +121,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dateTimePickerFinal);
+            this.groupBox2.Controls.Add(this.dateTimePickerInicial);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.radioButtonSim);
             this.groupBox2.Controls.Add(this.radioButtonNao);
@@ -119,6 +132,32 @@
             this.groupBox2.Size = new System.Drawing.Size(316, 94);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(201, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "e";
+            // 
+            // dateTimePickerFinal
+            // 
+            this.dateTimePickerFinal.Location = new System.Drawing.Point(222, 61);
+            this.dateTimePickerFinal.Name = "dateTimePickerFinal";
+            this.dateTimePickerFinal.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerFinal.TabIndex = 7;
+            // 
+            // dateTimePickerInicial
+            // 
+            this.dateTimePickerInicial.Location = new System.Drawing.Point(108, 61);
+            this.dateTimePickerInicial.Name = "dateTimePickerInicial";
+            this.dateTimePickerInicial.Size = new System.Drawing.Size(85, 20);
+            this.dateTimePickerInicial.TabIndex = 6;
             // 
             // label2
             // 
@@ -169,57 +208,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usar intervalos de datas:";
             // 
-            // buttonAtualizar
+            // buttonSalvar
             // 
-            this.buttonAtualizar.BackColor = System.Drawing.Color.Orange;
-            this.buttonAtualizar.FlatAppearance.BorderSize = 0;
-            this.buttonAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAtualizar.Location = new System.Drawing.Point(12, 559);
-            this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(712, 45);
-            this.buttonAtualizar.TabIndex = 20;
-            this.buttonAtualizar.Text = "Salvar Em Arquivo de Texto";
-            this.buttonAtualizar.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(85, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(222, 61);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(88, 20);
-            this.dateTimePicker2.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(201, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "e";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(542, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 59);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Filtrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSalvar.BackColor = System.Drawing.Color.Orange;
+            this.buttonSalvar.FlatAppearance.BorderSize = 0;
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Location = new System.Drawing.Point(12, 559);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(712, 45);
+            this.buttonSalvar.TabIndex = 20;
+            this.buttonSalvar.Text = "Salvar Em Arquivo de Texto";
+            this.buttonSalvar.UseVisualStyleBackColor = false;
             // 
             // FormImprimirAlunos
             // 
@@ -227,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(736, 616);
-            this.Controls.Add(this.buttonAtualizar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewListaDeAlunos);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -248,8 +248,8 @@
         private System.Windows.Forms.DataGridView dataGridViewListaDeAlunos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonAtualizar;
-        internal System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button buttonSalvar;
+        internal System.Windows.Forms.RadioButton radioButtonTodos;
         internal System.Windows.Forms.RadioButton radioButtonFeminino;
         internal System.Windows.Forms.RadioButton radioButtonMasculino;
         internal System.Windows.Forms.RadioButton radioButtonSim;
@@ -257,8 +257,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFinal;
+        private System.Windows.Forms.DateTimePicker dateTimePickerInicial;
+        private System.Windows.Forms.Button buttonFiltrar;
     }
 }

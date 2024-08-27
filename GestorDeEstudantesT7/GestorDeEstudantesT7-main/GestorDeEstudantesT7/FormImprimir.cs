@@ -18,6 +18,8 @@ namespace GestorDeEstudantesT7
             InitializeComponent();
         }
 
+        Estudante estudante = new Estudante();
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -30,13 +32,12 @@ namespace GestorDeEstudantesT7
 
         private void FormImprimirAlunos_Load(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void preencheTabela (MySqlCommand comando) 
-        { 
+        private void preencheTabela(MySqlCommand comando)
+        {
             // Preenche o dataGridView com as informações dos estudantes.
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM `estudantes`");
             // Impede que os dados exibidos na tabela sejam alterados.
             dataGridViewListaDeAlunos.ReadOnly = true;
             // Cria uma coluna para exibir as fotos dos alunos.
@@ -46,7 +47,7 @@ namespace GestorDeEstudantesT7
             // Determina a origem dos dados da tabela.
             dataGridViewListaDeAlunos.DataSource = estudante.getEstudantes(comando);
             // Determinar qual SERÁ a coluna com as imagens.
-            colunaDeFotos = (DataGridViewImageColumn) dataGridViewListaDeAlunos.Columns[7];
+            colunaDeFotos = (DataGridViewImageColumn)dataGridViewListaDeAlunos.Columns[7];
             colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
             // Impede o usuário de incluir linhas.
             dataGridViewListaDeAlunos.AllowUserToAddRows = false;
@@ -54,12 +55,46 @@ namespace GestorDeEstudantesT7
 
         private void radioButtonSim_CheckedChanged(object sender, EventArgs e)
         {
+            dateTimePickerInicial.Enabled = true;
+            dateTimePickerFinal.Enabled = true;
 
         }
 
         private void radioButtonNao_CheckedChanged(object sender, EventArgs e)
         {
+            dateTimePickerInicial.Enabled = false;
+            dateTimePickerFinal.Enabled = false;
+        }
 
+
+        private void buttonFiltrar_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando;
+            string busca;
+
+            if (radioButtonSim.Checked == true)
+            {
+                string dataInicial = dateTimePickerInicial.Value.ToString("dd-MM-yyyy");
+                string dataFinal = dateTimePickerFinal.Value.ToString("dd-MM-yyyy");
+
+                if (radioButtonMasculino.Checked)
+                {
+                    busca = "SELECT * FROM `estudantes` WHERE genero = 'Masculino'";
+                       
+                }
+                else if (radioButtonFeminino.Checked)
+                {
+                    busca = "SELECT * FROM `estudantes` WHERE genero = 'Feminino'";
+                        
+                }
+                else
+                {
+                    busca = "SELECT * FROM 'estudantes'";
+                     
+                }
+                comando = new MySqlCommand(busca);
+                preencheTabela(comando);
+            }
         }
     }
 }
