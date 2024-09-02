@@ -153,6 +153,7 @@ namespace GestorDeEstudantesT7
 
                 MemoryStream foto = new MemoryStream();
 
+
                 // Verificar se o aluno tem entre 10 e 100 anos.
                 int anoDeNascimento = dateTimePickerNascimento.Value.Year;
                 int anoAtual = DateTime.Now.Year;
@@ -233,5 +234,20 @@ namespace GestorDeEstudantesT7
                 MessageBox.Show("Ocorreu um erro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        bool Verificar()
+        { // método Verificar() começa aqui
+            if ((textBoxNome.Text.Trim() == "") ||
+               (textBoxSobrenome.Text.Trim() == "") ||
+               (textBoxTelefone.Text.Trim() == "") ||
+               (textBoxEndereco.Text.Trim() == "") ||
+               (pictureBoxFoto.Image == null))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        } // e termina aqui.
     }
 }

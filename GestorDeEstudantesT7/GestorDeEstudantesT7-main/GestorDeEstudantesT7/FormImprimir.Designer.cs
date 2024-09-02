@@ -220,6 +220,7 @@
             this.buttonSalvar.TabIndex = 20;
             this.buttonSalvar.Text = "Salvar Em Arquivo de Texto";
             this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // FormImprimirAlunos
             // 
